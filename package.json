@@ -2,7 +2,14 @@
     "name": "pastehtml",
     "version": "1.0.0",
     "description": "an extremely simple hassle-free anonymous HTML hosting service for web demos and markup messages.",
+    "author": "phillips1012 <phillips1012@gmail.com>",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/phillips1012/pasteHTML.git"
+    },
+    "preferGlobal": false,
     "main": "index.coffee",
+    "analyze": false,
     "scripts": {
         "start": "node_modules/coffee-script/bin/coffee ./index.coffee",
         "test": "node_modules/coffee-script/bin/coffee ./tests.coffee"
@@ -18,6 +25,7 @@
     "devDependencies": {
         "request": "2.27.0"
     },
+    "license": "WTFPL",
     "engines": {
         "node": ">=0.8"
     }
