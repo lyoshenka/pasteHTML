@@ -1,0 +1,24 @@
+{
+    "name": "pastehtml",
+    "version": "1.0.0",
+    "description": "an extremely simple hassle-free anonymous HTML hosting service for web demos and markup messages.",
+    "main": "index.coffee",
+    "scripts": {
+        "start": "node_modules/coffee-script/bin/coffee ./index.coffee",
+        "test": "node_modules/coffee-script/bin/coffee ./tests.coffee"
+    },
+    "dependencies": {
+        "coffee-script": "1.6.x",
+        "express": "2.5.x",
+        "sugar": "*",
+        "jade": "*",
+        "mongodb": "*",
+        "js-string-escape": "*"
+    },
+    "devDependencies": {
+        "request": "2.27.0"
+    },
+    "engines": {
+        "node": ">=0.8"
+    }
+}

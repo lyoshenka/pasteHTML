@@ -1,0 +1,42 @@
+!!! 5
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='author', content='phillips1012')
+        meta(name='description', content='PasteHTML is an extremely simple hassle-free anonymous HTML hosting service for web demos and markup messages.')
+        meta(name='keywords', content='pastehtml,html,demo,paste')
+        meta(property='og:image', content='/logo.png')
+        title pasteHTML
+        script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', type='text/javascript')
+        script(src='//cdnjs.cloudflare.com/ajax/libs/ace/1.1.01/ace.js', type='text/javascript')
+        script(src='/js/main.coffee', type='text/javascript')
+        script(src='/js/tinybox.js', type='text/javascript')
+        link(rel='stylesheet', href='/css/main.styl', type='text/css')
+    body
+        #header
+            h1 pasteHTML
+            p <a id="info" href="/info" target="_blank">(more info/FAQ)</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        form(action='/', method='post', target='_blank')
+            textarea(name='html', spellcheck="false", autofocus).
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;meta charset=&quot;UTF-8&quot;&gt;
+                        &lt;title&gt;paste&lt;/title&gt;
+                        &lt;style type=&quot;text/css&quot;&gt;
+                            body {font-family: sans-serif}
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;h1&gt;Hello world!&lt;/h1&gt;
+                        &lt;script type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;
+            #editor
+            input(type='reset', value='Reset')
+            input(type='submit', value='Submit')
+        if msg
+            script.
+                TINY.box.show({html:"!{msg}",topsplit:3,opacity:90})
+            noscript
+                div#noscriptmsg!= msg
