@@ -96,4 +96,4 @@ mongodb.MongoClient.connect config.db, (err, db) ->
         console.error err.stack
     
     app.listen config.port
-    console.log "pasteHTML is running on port #{config.port}"
+    console.log "pasteHTML is running on #{require('os').hostname()}:#{config.port}"
