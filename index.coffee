@@ -47,10 +47,6 @@ mongodb.MongoClient.connect config.db, (err, db) ->
             res.render "info.jade", locals:
                 pastes: stats.objects.format()
     
-    app.get "/robots.txt", (req, res) ->
-        res.setHeader "Content-Type", "text/plain"
-        res.send config.robots
-    
     app.get "/", (req, res, next) -> res.render "home.jade"
     
     app.post "/", (req, res, next) ->
