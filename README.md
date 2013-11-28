@@ -9,7 +9,7 @@ Run `npm install` to install dependencies.
 Install [MongoDB](http://www.mongodb.org/) and change `config.coffee` to suit your needs, then run it with `coffee ./index.coffee` (if coffee-script is installed globally) or `npm start`.
 
 ####Koding Instructions:
-If you just want to test pasteHTML, you can fire up a [koding](http://koding.com/) VM (even a guest VM will work) and enter these commands:
+If you just want to test pasteHTML, you can fire up a free [koding](http://koding.com/) VM and enter these commands:
 
     git clone https://github.com/phillips1012/pasteHTML.git
     cd pasteHTML
