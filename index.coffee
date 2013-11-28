@@ -16,6 +16,7 @@ formatBytes = (bytes) ->
     Math.round(bytes / Math.pow(1024, i), 2) + " " + unit
 
 mongodb.MongoClient.connect config.db, (err, db) ->
+    throw err if err
     pastes = db.collection "pastes"
     
     app = express.createServer()
