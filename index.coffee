@@ -43,9 +43,9 @@ mongodb.MongoClient.connect config.db, (err, db) ->
             next()
     
     app.get "/info", (req, res) ->
-        db.stats (err, stats) ->
+        pastes.count (err, count) ->
             res.render "info.jade", locals:
-                pastes: stats.objects.format()
+                pastes: count.format()
     
     app.get "/", (req, res, next) -> res.render "home.jade"
     
