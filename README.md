@@ -14,6 +14,6 @@ If you just want to test pasteHTML, you can fire up a [koding](http://koding.com
     git clone https://github.com/phillips1012/pasteHTML.git
     cd pasteHTML
     npm install
-    npm run
+    npm start
 
 Then open your browser up to {your-username}.kd.io:8080
