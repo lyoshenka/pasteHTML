@@ -8,10 +8,10 @@
         "url": "https://github.com/phillips1012/pasteHTML.git"
     },
     "preferGlobal": false,
-    "main": "index.coffee",
+    "main": "index.js",
     "analyze": false,
     "scripts": {
-        "start": "node_modules/coffee-script/bin/coffee ./index.coffee",
+        "start": "node ./index.js",
         "test": "node_modules/coffee-script/bin/coffee ./tests.coffee"
     },
     "dependencies": {
