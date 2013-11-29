@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
 require("coffee-script");
-require("./app");
+require("./index.coffee");
