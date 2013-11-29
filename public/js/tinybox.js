@@ -1,3 +1,5 @@
+/* http://www.scriptiny.com/2011/03/javascript-modal-windows/ */
+
 TINY = {};
 
 TINY.box = function () {
