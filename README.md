@@ -6,7 +6,7 @@ How to use
 =========
 First, run `npm install` to install dependencies.
 
-Then, install [MongoDB](http://www.mongodb.org/) and change `config.coffee` to suit your needs, then run it with `coffee ./index.coffee` (if coffee-script is installed globally) or `npm start`.
+Then, install [MongoDB](http://www.mongodb.org/) and change `config.coffee` to suit your needs, then run it with `node ./index.js` or `npm start`. (or `coffee ./index.coffee` if you have coffee-script installed globally)
 
 ####Koding Instructions:
 If you just want to test pasteHTML, you can fire up a free [koding](http://koding.com/) VM and enter these commands:
