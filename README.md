@@ -2,6 +2,8 @@
 =========
 [pasteHTML](http://pasteht.ml/) is an extremely simple hassle-free anonymous HTML hosting service for web demos and markup messages.
 
+Feel free to make suggestions, report bugs, and make pull requests.
+
 How to use
 =========
 First, run `npm install` to install dependencies.
