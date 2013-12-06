@@ -22,6 +22,9 @@
         "mongodb": "*",
         "js-string-escape": "*"
     },
+    "bundledDependencies": [
+        "express-minify"
+    ],
     "devDependencies": {
         "request": "2.27.0"
     },
