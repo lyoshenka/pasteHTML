@@ -11,9 +11,10 @@ jsescape = require "js-string-escape"
 
 wdir = (path) -> "#{__dirname}/#{path}"
 formatBytes = (bytes) ->
-    return "0 B"  if bytes is 0
-    unit = ["B", "KB", "MB", "GB", "TB"][parseInt(Math.floor(Math.log(bytes) / Math.log(1024)))]
-    Math.round(bytes / Math.pow(1024, i), 2) + " " + unit
+    return "0 B" if bytes is 0
+    power = Math.floor(Math.log(bytes) / Math.log(1024))
+    unit = ["B", "kB", "MB", "GB", "TB", "PB"][power]
+    "#{Math.round bytes / Math.pow(1024, power)} #{unit}"
 
 mongodb.MongoClient.connect config.db, (err, db) ->
     throw err if err
