@@ -1,4 +1,5 @@
-(($, ace, window, document) -> $ ->
+# `do` prevents cluttering of the global namespace and optimized minification
+do (window, document, $=jQuery, ace) ->
     textarea = ($ "textarea").hide()
     
     def = textarea.val()
@@ -26,5 +27,3 @@
     ($ "#info").attr 
         href: "javascript:TINY.box.show({url:'/info',topsplit:3,opacity:90})"
         target: "_self"
-    
-) jQuery, ace, window, document
