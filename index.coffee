@@ -5,7 +5,7 @@ config = require "./config"
 sugar = require "sugar"
 express = require "express"
 jade = require "jade"
-minify = require "express-minify"
+minify = require "express-minify-plus"
 mongodb = require "mongodb"
 jsescape = require "js-string-escape"
 
