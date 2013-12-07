@@ -41,7 +41,7 @@ mongodb.MongoClient.connect config.db, (err, db) ->
         app.use (req, res, next) ->
             res.removeHeader "X-Powered-By"
             res.header "Server", """
-                Node.js/#{process.versions.node} Express/#{express.version} (#{prcoess.platform})
+                Node.js/#{process.versions.node} Express/#{express.version} (#{process.platform})
             """
             next()
     
