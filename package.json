@@ -15,7 +15,7 @@
         "test": "node_modules/coffee-script/bin/coffee ./tests.coffee"
     },
     "dependencies": {
-        "express-minify": "*",
+        "express-minify-plus": "*",
         "coffee-script": "1.6.x",
         "express": "2.5.x",
         "sugar": "*",
