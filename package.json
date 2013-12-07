@@ -15,6 +15,7 @@
         "test": "node_modules/coffee-script/bin/coffee ./tests.coffee"
     },
     "dependencies": {
+        "express-minify": "*",
         "coffee-script": "1.6.x",
         "express": "2.5.x",
         "sugar": "*",
@@ -22,9 +23,6 @@
         "mongodb": "*",
         "js-string-escape": "*"
     },
-    "bundledDependencies": [
-        "express-minify"
-    ],
     "devDependencies": {
         "request": "2.27.0"
     },
