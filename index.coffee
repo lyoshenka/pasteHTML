@@ -58,7 +58,8 @@ mongodb.MongoClient.connect config.db, (err, db) ->
         
         if typeof req.body.html isnt "string" or req.body.html.length is 0
             return res.render "home.jade", locals:
-                msg: "Your paste is empty.";
+                msg: "Your paste is empty."
+        
         if Buffer.byteLength(req.body.html, "utf8") > config.limit
             return res.render "home.jade", locals:
                 msg: "Your paste is over #{formatBytes config.limit}. Please minify your HTML."
@@ -69,10 +70,7 @@ mongodb.MongoClient.connect config.db, (err, db) ->
         
         pastes.save _id: id, content: req.body.html, (err, doc) ->
             throw err if err
-            res.setHeader "Location", "/#{id}"
-            res.setHeader "Content-Type", "text/plain"
-            res.status 302
-            res.send id
+            res.redirect "/#{id}"
     
     app.get "/:id", (req, res, next) ->
         pastes.findOne _id: req.params.id, (err, item) ->
