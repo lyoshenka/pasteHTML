@@ -1,6 +1,6 @@
 module.exports =
-    port: 8080
-    db: "mongodb://127.0.0.1:27017/pastehtml"
+    port: process.env.PORT or 8080
+    db: process.env.MONGODB_URI or "mongodb://127.0.0.1:27017/pastehtml"
     
     limit: 131072  # Paste size limit in bytes
     ids:           # Paste ID length and acceptable characters
