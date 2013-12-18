@@ -1,5 +1,5 @@
 # `do` prevents cluttering of the global namespace and optimized minification
-do (window, document, $=jQuery, ace) ->
+do (window, document, $=jQuery, ace) -> $ ->
     textarea = ($ "textarea").hide()
     
     def = textarea.val()
