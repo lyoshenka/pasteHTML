@@ -41,9 +41,7 @@ mongodb.MongoClient.connect config.db, (err, db) ->
         app.use express.errorHandler showStack: true, dumpExceptions: false
         app.use (req, res, next) ->
             res.removeHeader "X-Powered-By"
-            res.header "Server", """
-                Node.js/#{process.versions.node} Express/#{express.version} (#{process.platform})
-            """
+            res.header "Server", config.server
             next()
     
     app.get "/info", (req, res) ->
