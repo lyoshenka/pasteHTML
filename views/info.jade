@@ -1,6 +1,4 @@
-style.
-    #faq{font-family:sans-serif;text-rendering:optimizeLegibility}#faq h4{font-family:Ubuntu}
-span#faq
+mixin info
     h4 What is pasteHTML?
     p pasteHTML is an extremely simple hassle-free anonymous HTML hosting service for web demos and markup messages.
     
@@ -25,3 +23,16 @@ span#faq
     
     h4(style="display:inline-block") How many pastes are there?&nbsp;
     p(style="display:inline-block") #{pastes}. (feel free to bump this number up)
+    
+if xhr
+    doctype html
+    html
+        head
+            style.
+                #faq{font-family:sans-serif;text-rendering:optimizeLegibility}#faq h4{font-family:Ubuntu}
+        body
+            span#faq
+                a(href="/") Back to pasteHTML
+                +info
+else
+    +info
