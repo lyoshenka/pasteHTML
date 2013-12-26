@@ -48,6 +48,7 @@ mongodb.MongoClient.connect config.db, (err, db) ->
         pastes.count (err, count) ->
             res.render "info.jade", locals:
                 pastes: count.format()
+                xhr: req.headers["x-requested-with"] is "XMLHttpRequest"
     
     app.get "/", (req, res, next) -> res.render "home.jade"
     
